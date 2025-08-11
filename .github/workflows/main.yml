@@ -6,9 +6,9 @@ name: Publish AlwaysOnTop_Tooltip
 on:
   push:
     paths:
-      # Trigger only when py/toml-files are pushed in the alwaysontop_tooltip directory
-      - 'alwaysontop_tooltip/**/*.py'
-      - 'alwaysontop_tooltip/**/*.toml'
+      # Trigger only when py/toml-files are pushed
+      - '*.py'
+      - '*.toml'
 
 permissions:
   contents: read
@@ -56,11 +56,10 @@ jobs:
           fi
 
       - name: Build package from subfolder
-        working-directory: ./alwaysontop_tooltip
         run: python -m build
 
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           password: ${{ secrets.PYPI_API_TOKEN }}
-          packages-dir: alwaysontop_tooltip/dist
+          packages-dir: dist
