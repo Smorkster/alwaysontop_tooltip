@@ -6,9 +6,9 @@ name: Publish AlwaysOnTop_Tooltip
 on:
   push:
     paths:
-      # Trigger only when py/toml-files are pushed in the alwaysontop_tooltip directory
-      - 'alwaysontop_tooltip/**/*.py'
-      - 'alwaysontop_tooltip/**/*.toml'
+      # Trigger only when py/toml-files are pushed
+      - '*.py'
+      - '*.toml'
 
 permissions:
   contents: read
