@@ -56,11 +56,10 @@ jobs:
           fi
 
       - name: Build package from subfolder
-        working-directory: ./alwaysontop_tooltip
         run: python -m build
 
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           password: ${{ secrets.PYPI_API_TOKEN }}
-          packages-dir: alwaysontop_tooltip/dist
+          packages-dir: dist
