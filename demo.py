@@ -1,3 +1,14 @@
+"""
+A demo script demonstrating AlwaysOnTopToolTip
+
+Author: Smorkster
+GitHub: https://github.com/Smorkster/splashscreen
+License: MIT
+Version: 1.2
+Created: 2025-08-11
+"""
+
+
 import tkinter as tk
 from alwaysontop_tooltip import AlwaysOnTopToolTip
 
