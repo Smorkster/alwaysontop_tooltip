@@ -43,3 +43,13 @@ Additionaly these parameters can be used for more styling.
   * bg - Background color of the tooltip
   * font - Font for the text of the tooltip
   * wraplength - At what length should the text be wrapped. This in effect also affects max width of the tooltip
+
+### Reconfigure
+With the function '.config()' the tooltip can be reconfigured. Values that can be reconfigured:
+
+  * **new_text** (str): The new text in the tooltip
+  * **new_bg** (str): Color for the background
+  * **new_font** (tuble(str, int)): The font used for the text, (<fontname>, <fontsize>)
+  * **new_relief** (str): Borderstyle, must be one of 'solid', 'flat', 'raised', 'sunken', 'groove', 'ridge'
+  * **new_borderwidth** (int): New width of border
+  * **new_wraplength** (int): New character wraplength, this is the maximum length of text before it gets wraped to a new line
